@@ -8,14 +8,14 @@ public void setup()
      public void draw()
 {
      background(0);
-     dragY=mouseY;
+     dragY=(mouseY*5);
      sierpinski(50,500,dragY,dragY);
      noLoop();
      
 }
 public void mouseDragged()//optional
 {
-     if (Math.random()<.1)
+     if (Math.random()<.02)
      fill((int)(Math.random()*250),(int)(Math.random()*250),(int)(Math.random()*250));
      redraw();
 }
@@ -34,7 +34,6 @@ public void sierpinski(int x, int y, int width, int height) {
           ellipse (x,y,width,height);
           sierpinski(x+120,y,width+10,height+10);
         
-            
               }
      }
      
